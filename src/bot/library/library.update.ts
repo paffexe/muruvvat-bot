@@ -32,8 +32,5 @@ export class LibraryUpdate {
   async onHearsSahiyRjc(@Ctx() ctx: Context) {
     await this.botService.chooseRole(ctx);
   }
-  @Hears("🆕Yangi kutubxona qo'shish")
-  async addNewLibrary(@Ctx() ctx: Context) {
-    await this.libraryService.addNewLibrary(ctx);
-  }
+  
 }

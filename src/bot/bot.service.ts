@@ -202,7 +202,7 @@ export class BotService {
             ctx.message.location.longitude;
           library.last_state = "finish";
           await library.save();
-          await ctx.replyWithHTML("Sahiy sifatida ro'yahatdan o'tdingiz!", {
+          await ctx.replyWithHTML("Muvafaqiyatli ro'yahatdan o'tdingiz!", {
             ...Markup.removeKeyboard(),
           });
         }

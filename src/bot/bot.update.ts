@@ -1,12 +1,3 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-} from "@nestjs/common";
 import { BotService } from "./bot.service";
 import { Command, Ctx, On, Start, Update } from "nestjs-telegraf";
 import { Context } from "telegraf";
@@ -31,10 +22,9 @@ export class BotUpdate {
   }
 
   @On("location")
-  async onLocation(@Ctx() ctx: Context){
-    await this.botService.onLocation(ctx)
+  async onLocation(@Ctx() ctx: Context) {
+    await this.botService.onLocation(ctx);
   }
-
 
   @On("text")
   async onText(@Ctx() ctx: Context) {

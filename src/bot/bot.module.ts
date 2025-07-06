@@ -8,14 +8,19 @@ import { SequelizeModule } from "@nestjs/sequelize";
 import { Library } from "./library/model/library.model";
 import { LibraryService } from "./library/library.service";
 import { LibraryUpdate } from "./library/library.update";
+import { Sabrlilar } from "./sabrlilar/model/sabrlilar.model";
+import { SabrlilarService } from "./sabrlilar/sabrlilar.service";
+import { SabrlilarUpdate } from "./sabrlilar/sabrlilar.update";
 
 @Module({
-  imports: [SequelizeModule.forFeature([Bot, Library])],
+  imports: [SequelizeModule.forFeature([Bot, Library, Sabrlilar])],
   controllers: [],
   providers: [
     BotService,
     LibraryService,
     LibraryUpdate,
+    SabrlilarService,
+    SabrlilarUpdate,
     BotUpdate,
     {
       provide: BOT_NAME,
